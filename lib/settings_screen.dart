@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SettingsScreen extends StatefulWidget {
+class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
   @override
-  State<SettingsScreen> createState() => _SettingsScreenState();
-}
-
-class _SettingsScreenState extends State<SettingsScreen> {
-  @override
   Widget build(BuildContext context) {
+    // int _currentIndex = 0;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -23,6 +20,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SizedBox(
               height: 20,
@@ -55,9 +54,139 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 )
               ],
             ),
-            
+            // ListView.builder(
+            //   itemCount: 1,
+            //   itemBuilder: (context, index) {
+            //     return ListTile(
+            //       title: Text('Notifications'),
+            //     );
+            //   },
+            // ),
+            SizedBox(
+              height: 20,
+            ),
+
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/notification.png',
+                  height: 30,
+                ),
+                title: Text(
+                  'Notifications',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/giftbox.png',
+                  height: 30,
+                ),
+                title: Text(
+                  'Invite Friends',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/coupons.png',
+                  height: 35,
+                ),
+                title: Text(
+                  'Credits & Coupons',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/coupons.png',
+                  height: 30,
+                ),
+                title: Text(
+                  'List Your Property',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/settings.png',
+                  height: 30,
+                ),
+                title: Text(
+                  'Settings',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/customerservice.png',
+                  height: 30,
+                ),
+                title: Text(
+                  'Help & Support',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                trailing: Image.asset(
+                  'images/feedback.png',
+                  height: 30,
+                ),
+                title: Text(
+                  'Give us Feedback',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        // fixedColor: Colors.black,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 30,
+              color: Colors.black,
+            ),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                size: 30,
+                color: Colors.black,
+              ),
+              label: 'Explore'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.favorite_border_outlined,
+                size: 30,
+                color: Colors.black,
+              ),
+              label: 'Saved'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.settings,
+                size: 30,
+                color: Colors.black,
+              ),
+              label: 'Settings',
+              backgroundColor: Colors.black)
+        ],
       ),
     );
   }
