@@ -149,7 +149,7 @@ class ContactAgentScreen extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              height: 50,
+              height: 60,
               width: 380,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
