@@ -1,16 +1,8 @@
 # screens_practice
 
-A new Flutter project.
+THis a commercial project app realted house finding and selling.
 
-## Getting Started
+I have created design of it in multiple screens.
 
-This project is a starting point for a Flutter application.
+# screenshots
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
