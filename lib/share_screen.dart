@@ -274,32 +274,7 @@ class _ShareScreenState extends State<ShareScreen> {
                           padding: EdgeInsets.all(6),
                           child: ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(12)),
-                            // child: TextField(
-                            //   decoration: InputDecoration(
-                            //     prefixIcon: Icon(
-                            //       Icons.copy,
-                            //       color: Colors.green,
-                            //     ),
-                            //     filled: true,
-                            //     fillColor: Color.fromARGB(255, 217, 243, 217),
-                            //     hintText: '   Invite your friends',
-                            //     hintStyle: TextStyle(color: Colors.green),
-                            //     // border: OutlineInputBorder(
-                            //     //   borderSide: BorderSide(
-                            //     //       color: const Color.fromARGB(
-                            //     //           255, 163, 240, 166)),
-                            //     //   borderRadius: BorderRadius.circular(10),
-                            //     // ),
-                            //     // focusedBorder: OutlineInputBorder(
-                            //     //   borderRadius: BorderRadius.circular(30),
-                            //     //   borderSide: BorderSide(color: Colors.white),
-                            //     // ),
-                            //     // enabledBorder: OutlineInputBorder(
-                            //     //     borderRadius: BorderRadius.circular(10),
-                            //     //     borderSide:
-                            //     //  BorderSide(color: Colors.green))
-                            //   ),
-                            // ),
+
                             child: Row(
                               children: [
                                 SizedBox(

@@ -153,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
-                        'Sign in using iPhone/Mobile',
+                        'Post My Property',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
