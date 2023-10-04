@@ -1,58 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/blog_screen2.dart';
+import 'package:screens_practice/chat_screen.dart';
+import 'package:screens_practice/explore_screen2.dart';
 import 'package:screens_practice/feed_screen.dart';
-import 'package:screens_practice/settings_screen.dart';
-import 'package:screens_practice/settings_screen2.dart';
+import 'package:screens_practice/notifications_screen2.dart';
+import 'package:screens_practice/setting_screen_another.dart';
 
-class NotificationsScreen extends StatelessWidget {
-  const NotificationsScreen({super.key});
+class SettingsScreen2 extends StatefulWidget {
+  const SettingsScreen2({super.key});
 
+  @override
+  State<SettingsScreen2> createState() => _SettingsScreen2State();
+}
+
+class _SettingsScreen2State extends State<SettingsScreen2> {
+  int _currentIndex = 0;
+  final List<Widget> _screens = [
+    FeedScreen(),
+    ExploreScreen2(),
+    BllogScreen2(),
+    SettingscreenAnother()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => SettingsScreen2()));
-          },
-          child: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-        ),
         title: Text(
-          'Notifications',
+          'Settings',
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 24),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => FeedScreen()));
-              },
-              child: Image.asset(
-                'images/group_people.webp',
-                height: 300,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'You are all caught up!',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            )
-          ],
-        ),
-      ),
+      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (index) {
+          currentIndex:
+          _currentIndex;
+
+          setState(() {
+            _currentIndex = index;
+          });
+        },
         // fixedColor: Colors.black,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

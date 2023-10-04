@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/contact_agent2_screen.dart';
 
 class ContactAgentScreen extends StatelessWidget {
   const ContactAgentScreen({super.key});
@@ -147,26 +148,32 @@ class ContactAgentScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 60,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Color.fromARGB(255, 39, 184, 81),
+            GestureDetector(
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      'Get Contact Details',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'Get Contact Details',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                ],
-              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => ContactAgentScreen2()));
+              },
             ),
           ],
         ),

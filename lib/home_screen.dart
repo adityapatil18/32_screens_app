@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/login_screen.dart';
 
 class HomeSreen extends StatefulWidget {
   const HomeSreen({super.key});
@@ -17,15 +18,21 @@ class _HomeSreenState extends State<HomeSreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 150,
-              width: 150,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('images/home1.png'),
-                  fit: BoxFit.cover,
+            GestureDetector(
+              child: Container(
+                height: 150,
+                width: 150,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/home1.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => LoginScreen()));
+              },
             ),
             SizedBox(
               height: 20,

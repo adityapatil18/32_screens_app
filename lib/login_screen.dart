@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/login_screen2.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -141,26 +142,27 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 20,
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  height: 60,
-                  width: 380,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Color.fromARGB(255, 39, 184, 81),
+                GestureDetector(
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 60,
+                    width: 380,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Color.fromARGB(255, 39, 184, 81),
+                    ),
+                    child: Text(
+                      'Sign in using Phone/Mobile',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(
-                        'Post My Property',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => LoginScreen2()));
+                  },
                 ),
               ],
             ),

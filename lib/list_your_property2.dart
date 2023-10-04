@@ -1,5 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:screens_practice/list_your_property3_screen.dart';
 
 class ListYourProperty2Screen extends StatefulWidget {
   const ListYourProperty2Screen({super.key});
@@ -88,20 +89,29 @@ class _ListYourProperty2ScreenState extends State<ListYourProperty2Screen> {
               height: 30,
               thickness: 2,
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 60,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Color.fromARGB(255, 39, 184, 81),
-              ),
-              child: Text(
-                'Upload Photos',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LisstYourPropertyScreen3(),
+                    ));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Text(
+                  'Upload Photos',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
             ),
           ],

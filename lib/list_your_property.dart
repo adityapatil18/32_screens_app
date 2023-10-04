@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/list_your_property2.dart';
 
 class ListPropertyScreen extends StatefulWidget {
   const ListPropertyScreen({super.key});
@@ -195,25 +196,29 @@ class _ListPropertyScreenState extends State<ListPropertyScreen> {
               height: 30,
               thickness: 2,
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 60,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Color.fromARGB(255, 39, 184, 81),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'Sign in using iPhone/Mobile',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                ],
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ListYourProperty2Screen(),
+                    ));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Text(
+                  'Post My Property',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
             ),
           ],

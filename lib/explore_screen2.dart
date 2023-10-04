@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/filters_screen.dart';
 
 class ExploreScreen2 extends StatefulWidget {
   const ExploreScreen2({super.key});
@@ -50,17 +51,26 @@ class _ExploreScreen2State extends State<ExploreScreen2> {
                       borderRadius: BorderRadius.circular(20)),
                   child: Row(
                     children: [
-                      Container(
-                        alignment: Alignment.center,
-                        width: 50,
-                        height: 30,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.horizontal(
-                                left: Radius.circular(20))),
-                        child: Text(
-                          'Buy',
-                          style: TextStyle(color: Colors.white),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Filterscreen(),
+                              ));
+                        },
+                        child: Container(
+                          alignment: Alignment.center,
+                          width: 50,
+                          height: 30,
+                          decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.horizontal(
+                                  left: Radius.circular(20))),
+                          child: Text(
+                            'Buy',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                       SizedBox(

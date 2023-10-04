@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/contact_agent2_screen.dart';
+import 'package:screens_practice/last_screen.dart';
 
 class LisstYourPropertyScreen3 extends StatefulWidget {
   const LisstYourPropertyScreen3({
@@ -219,20 +221,29 @@ class _LisstYourPropertyScreen3State extends State<LisstYourPropertyScreen3> {
               height: 30,
               thickness: 2,
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 60,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Color.fromARGB(255, 39, 184, 81),
-              ),
-              child: Text(
-                'Continue to Post',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LastScreen(),
+                    ));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Text(
+                  'Continue to Post',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
             ),
           ],

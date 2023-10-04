@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/invite_friends_screen.dart';
+import 'package:screens_practice/setting_screen_another.dart';
 
 class BlogScreen extends StatelessWidget {
   const BlogScreen({super.key});
@@ -8,9 +10,18 @@ class BlogScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingscreenAnother(),
+                ));
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
         title: Text(
           'Blog',
@@ -24,13 +35,22 @@ class BlogScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              height: MediaQuery.of(context).size.height / 3,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('images/room2.jpg'),
-                      fit: BoxFit.cover)),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => InviteFriendsScreen(),
+                    ));
+              },
+              child: Container(
+                height: MediaQuery.of(context).size.height / 3,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('images/room2.jpg'),
+                        fit: BoxFit.cover)),
+              ),
             ),
             SizedBox(
               height: 20,

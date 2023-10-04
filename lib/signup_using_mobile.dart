@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/verify_phone_screen.dart';
 
 class SignupUsingMobile extends StatelessWidget {
   const SignupUsingMobile({super.key});
@@ -57,20 +58,26 @@ class SignupUsingMobile extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 60,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Color.fromARGB(255, 39, 184, 81),
-              ),
-              child: Text(
-                'Create an account',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => VerifyPhoneScreen()));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Text(
+                  'Create an account',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
             ),
             SizedBox(

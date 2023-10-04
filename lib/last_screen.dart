@@ -103,7 +103,6 @@ class LastScreen extends StatelessWidget {
                     style: TextStyle(
                         fontStyle: FontStyle.italic, letterSpacing: 1.2),
                   )
-                  
                 ],
               ),
             )

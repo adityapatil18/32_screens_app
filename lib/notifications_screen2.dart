@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/chat_screen.dart';
 
 class NotificationsScreen2 extends StatelessWidget {
   const NotificationsScreen2({super.key});
@@ -34,28 +35,37 @@ class NotificationsScreen2 extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Card(
-                elevation: 0,
-                child: ListTile(
-                  leading: CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('images/profile.png'),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChatScreen(),
+                      ));
+                },
+                child: Card(
+                  elevation: 0,
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage('images/profile.png'),
+                    ),
+                    title: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Pain . 3 more people',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '3 min ago',
+                          style: TextStyle(fontWeight: FontWeight.w300),
+                        )
+                      ],
+                    ),
+                    subtitle: Text(
+                        'Know the pain accept the pain and feeel the pain who dosent know the  pain the will never understand true peace'),
                   ),
-                  title: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Pain . 3 more people',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '3 min ago',
-                        style: TextStyle(fontWeight: FontWeight.w300),
-                      )
-                    ],
-                  ),
-                  subtitle: Text(
-                      'Know the pain accept the pain and feeel the pain who dosent know the  pain the will never understand true peace'),
                 ),
               ),
               Card(

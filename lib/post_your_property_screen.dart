@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:screens_practice/setting_screen_another.dart';
 
 class PostPropertyScreen extends StatefulWidget {
   const PostPropertyScreen({super.key});
@@ -18,9 +19,18 @@ class _PostPropertyScreenState extends State<PostPropertyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingscreenAnother(),
+                ));
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
         backgroundColor: Colors.white,
         elevation: 0,

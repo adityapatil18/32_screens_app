@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:screens_practice/signup_using_mobile.dart';
+import 'package:screens_practice/last_screen.dart';
 
-class ContactAgentScreen2 extends StatefulWidget {
-  const ContactAgentScreen2({super.key});
+class ContactAgentScreen3 extends StatelessWidget {
+  const ContactAgentScreen3({super.key});
 
-  @override
-  State<ContactAgentScreen2> createState() => _ContactAgentScreen2State();
-}
-
-class _ContactAgentScreen2State extends State<ContactAgentScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -123,10 +118,8 @@ class _ContactAgentScreen2State extends State<ContactAgentScreen2> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (_) => SignupUsingMobile()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => LastScreen()));
                       },
                       child: Container(
                         alignment: Alignment.center,

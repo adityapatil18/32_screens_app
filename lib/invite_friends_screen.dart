@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/setting_screen_another.dart';
+import 'package:screens_practice/share_screen.dart';
 
 class InviteFriendsScreen extends StatelessWidget {
   const InviteFriendsScreen({super.key});
@@ -27,10 +29,19 @@ class InviteFriendsScreen extends StatelessWidget {
             Positioned(
               left: 20,
               top: 60,
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.white,
-                size: 30,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SettingscreenAnother(),
+                      ));
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  size: 30,
+                ),
               ),
             ),
             Positioned(
@@ -74,60 +85,75 @@ class InviteFriendsScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
-                    Container(
-                      height: 150,
-                      width: MediaQuery.of(context).size.width,
-                      child: ListView.builder(
-                        padding: EdgeInsets.all(10),
-                        // shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 8,
-                        itemBuilder: (context, index) {
-                          return Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  width: 60,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Image.asset(
-                                    'images/profile.png',
-                                    fit: BoxFit.contain,
-                                    height: 100,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => ShareScreen()));
+                      },
+                      child: Container(
+                        height: 150,
+                        width: MediaQuery.of(context).size.width,
+                        child: ListView.builder(
+                          padding: EdgeInsets.all(10),
+                          // shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 8,
+                          itemBuilder: (context, index) {
+                            return Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    width: 60,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Image.asset(
+                                      'images/profile.png',
+                                      fit: BoxFit.contain,
+                                      height: 100,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                'Name',
-                                style: TextStyle(color: Colors.white),
-                              )
-                            ],
-                          );
-                        },
+                                Text(
+                                  'Name',
+                                  style: TextStyle(color: Colors.white),
+                                )
+                              ],
+                            );
+                          },
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 380,
-                      child: TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.insert_invitation),
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: '   Invite your friends',
-                            border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            // focusedBorder: OutlineInputBorder(
-                            //   borderRadius: BorderRadius.circular(30),
-                            //   borderSide: BorderSide(color: Colors.white),
-                            // ),
-                            enabledBorder: OutlineInputBorder(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ShareScreen(),
+                            ));
+                      },
+                      child: Container(
+                        width: 380,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              suffixIcon: Icon(Icons.insert_invitation),
+                              filled: true,
+                              fillColor: Colors.white,
+                              hintText: '   Invite your friends',
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(color: Colors.white))),
+                              ),
+                              // focusedBorder: OutlineInputBorder(
+                              //   borderRadius: BorderRadius.circular(30),
+                              //   borderSide: BorderSide(color: Colors.white),
+                              // ),
+                              enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30),
+                                  borderSide: BorderSide(color: Colors.white))),
+                        ),
                       ),
                     ),
                   ],

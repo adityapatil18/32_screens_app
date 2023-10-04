@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/settings_screen.dart';
 
 class LoginScreen2 extends StatelessWidget {
   const LoginScreen2({super.key});
@@ -127,8 +128,8 @@ class LoginScreen2 extends StatelessWidget {
                         child: Divider(
                           color: Colors.white,
                           height: 1.0,
-                          thickness: 2,
-                          indent: 60,
+                          thickness: 1,
+                          indent: 20,
                         ),
                       ),
                       Padding(
@@ -143,7 +144,8 @@ class LoginScreen2 extends StatelessWidget {
                         child: Divider(
                           color: Colors.white,
                           height: 1.0,
-                          thickness: 2,
+                          thickness: 1,
+                          endIndent: 20,
                         ),
                       ),
                     ],
@@ -152,21 +154,27 @@ class LoginScreen2 extends StatelessWidget {
             Positioned(
               top: 800,
               left: 20,
-              child: Container(
-                alignment: Alignment.center,
-                height: 60,
-                width: 380,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Color.fromARGB(255, 39, 184, 81),
+              child: GestureDetector(
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 60,
+                  width: 380,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color.fromARGB(255, 39, 184, 81),
+                  ),
+                  child: Text(
+                    'Sign up with using Phone/Mobile',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
-                child: Text(
-                  'Sign up with using Phone/Mobile',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => SettingsScreen()));
+                },
               ),
             )
           ],

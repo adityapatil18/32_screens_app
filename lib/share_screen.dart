@@ -3,6 +3,9 @@ import 'dart:ui';
 
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:screens_practice/explore_screen2.dart';
+import 'package:screens_practice/setting_screen_another.dart';
+import 'package:screens_practice/settings_screen2.dart';
 
 class ShareScreen extends StatefulWidget {
   const ShareScreen({super.key});
@@ -21,10 +24,19 @@ class _ShareScreenState extends State<ShareScreen> {
           Positioned(
             left: 20,
             top: 60,
-            child: Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-              size: 30,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SettingsScreen2(),
+                    ));
+              },
+              child: Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+                size: 30,
+              ),
             ),
           ),
           Positioned(
@@ -83,59 +95,68 @@ class _ShareScreenState extends State<ShareScreen> {
             left: 90,
             child: Column(
               children: [
-                Container(
-                  height: 280,
-                  width: 250,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.white),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(3.0),
-                        child: Image.asset(
-                          'images/room2.jpg',
-                          height: 140,
-                          width: 250,
-                          fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ExploreScreen2(),
+                            ));
+                      },
+                  child: Container(
+                    height: 280,
+                    width: 250,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.white),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Image.asset(
+                            'images/room2.jpg',
+                            height: 140,
+                            width: 250,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            '14 Hope Street, Unit 3D',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Something text ',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 12),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Text(
-                            'text . text . 3000 sq ft.',
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '\$30,500',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 18),
-                          )
-                        ],
-                      )
-                    ],
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '14 Hope Street, Unit 3D',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Something text ',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300, fontSize: 12),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              'text . text . 3000 sq ft.',
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              '\$30,500',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 18),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -274,7 +295,6 @@ class _ShareScreenState extends State<ShareScreen> {
                           padding: EdgeInsets.all(6),
                           child: ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(12)),
-
                             child: Row(
                               children: [
                                 SizedBox(

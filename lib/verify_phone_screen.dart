@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:screens_practice/signup_using_phone.dart';
 
 class VerifyPhoneScreen extends StatelessWidget {
   const VerifyPhoneScreen({super.key});
@@ -121,10 +122,16 @@ class VerifyPhoneScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Text(
-              'Resend',
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SignupUsingPhone()));
+              },
+              child: Text(
+                'Resend',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.green),
+              ),
             )
           ],
         ),

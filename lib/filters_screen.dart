@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:progress_indicator/progress_indicator.dart';
+import 'package:screens_practice/list_your_property2.dart';
+import 'package:screens_practice/post_your_property_screen.dart';
 
 class Filterscreen extends StatelessWidget {
   const Filterscreen({super.key});
@@ -368,8 +370,32 @@ class Filterscreen extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
-            )
-            
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PostPropertyScreen(),
+                    ));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Text(
+                  'Procceed',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ),
+            ),
           ],
         ),
       ),

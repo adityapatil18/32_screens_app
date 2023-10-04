@@ -4,8 +4,8 @@ import 'package:screens_practice/blog_screen2.dart';
 import 'package:screens_practice/chat_screen.dart';
 import 'package:screens_practice/contact_agent2_screen.dart';
 import 'package:screens_practice/contactagnet_screen.dart';
-import 'package:screens_practice/explore_screen.dart';
 import 'package:screens_practice/explore_screen2.dart';
+import 'package:screens_practice/feed_screen.dart';
 import 'package:screens_practice/feedback_screen.dart';
 import 'package:screens_practice/filters_screen.dart';
 import 'package:screens_practice/home_screen.dart';
@@ -37,7 +37,7 @@ class ScreensPractice extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen2(),
+      home: HomeSreen(),
     );
   }
 }

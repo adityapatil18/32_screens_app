@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/setting_screen_another.dart';
+import 'package:screens_practice/settings_screen.dart';
+import 'package:screens_practice/settings_screen2.dart';
 
 class SignupUsingPhone extends StatelessWidget {
   const SignupUsingPhone({super.key});
@@ -57,20 +60,26 @@ class SignupUsingPhone extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Container(
-              alignment: Alignment.center,
-              height: 60,
-              width: 380,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Color.fromARGB(255, 39, 184, 81),
-              ),
-              child: Text(
-                'Create an account',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => SettingscreenAnother()));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 60,
+                width: 380,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color.fromARGB(255, 39, 184, 81),
+                ),
+                child: Text(
+                  'Create an account',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
               ),
             ),
             SizedBox(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screens_practice/personal_chat_screen.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -63,38 +64,44 @@ class _ChatScreenState extends State<ChatScreen> {
                   },
                 ),
               ),
-              Card(
-                elevation: 0,
-                child: ListTile(
-                  leading: CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('images/profile.png'),
-                  ),
-                  title: Text(
-                    'Pain ',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text('Hi, How are u  toaday?'),
-                  trailing: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '11.29',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Container(
-                        height: 20,
-                        width: 30,
-                        // color: Colors.green,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Text(
-                          '10',
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => PersonalChatScreen()));
+                },
+                child: Card(
+                  elevation: 0,
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage('images/profile.png'),
+                    ),
+                    title: Text(
+                      'Pain ',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text('Hi, How are u  toaday?'),
+                    trailing: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '11.29',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                      )
-                    ],
+                        Container(
+                          height: 20,
+                          width: 30,
+                          // color: Colors.green,
+                          decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Text(
+                            '10',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -2,26 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:screens_practice/feedback_screen.dart';
 import 'package:screens_practice/invite_friends_screen.dart';
 import 'package:screens_practice/list_your_property.dart';
-import 'package:screens_practice/notifications_screen.dart';
-import 'package:screens_practice/settings_screen2.dart';
+import 'package:screens_practice/notifications_screen2.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+class SettingscreenAnother extends StatefulWidget {
+  const SettingscreenAnother({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    // int _currentIndex = 0;
+  State<SettingscreenAnother> createState() => _SettingscreenAnotherState();
+}
 
+class _SettingscreenAnotherState extends State<SettingscreenAnother> {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Settings',
-          style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 24),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -82,8 +75,10 @@ class SettingsScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => NotificationsScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => NotificationsScreen2()));
                 },
               ),
             ),
@@ -141,10 +136,6 @@ class SettingsScreen extends StatelessWidget {
                   'Settings',
                   style: TextStyle(fontSize: 18),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => SettingsScreen2()));
-                },
               ),
             ),
             Card(
@@ -170,8 +161,11 @@ class SettingsScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 18),
                 ),
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => FeedbackScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FeedbackScreen(),
+                      ));
                 },
               ),
             ),
