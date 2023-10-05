@@ -16,6 +16,7 @@ import 'package:screens_practice/list_your_property2.dart';
 import 'package:screens_practice/list_your_property3_screen.dart';
 import 'package:screens_practice/login_screen.dart';
 import 'package:screens_practice/login_screen2.dart';
+import 'package:screens_practice/map_screen.dart';
 import 'package:screens_practice/notifications_screen.dart';
 import 'package:screens_practice/notifications_screen2.dart';
 import 'package:screens_practice/personal_chat_screen.dart';
@@ -37,7 +38,7 @@ class ScreensPractice extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeSreen(),
+      home: MapScreen(),
     );
   }
 }

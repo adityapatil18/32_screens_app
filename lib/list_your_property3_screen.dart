@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:screens_practice/contact_agent2_screen.dart';
 import 'package:screens_practice/last_screen.dart';
 
 class LisstYourPropertyScreen3 extends StatefulWidget {

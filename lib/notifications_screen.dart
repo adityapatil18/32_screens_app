@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:screens_practice/feed_screen.dart';
-import 'package:screens_practice/settings_screen.dart';
 import 'package:screens_practice/settings_screen2.dart';
 
 class NotificationsScreen extends StatelessWidget {

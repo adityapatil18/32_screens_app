@@ -1,9 +1,7 @@
 import 'package:chat_bubbles/bubbles/bubble_special_three.dart';
 import 'package:flutter/material.dart';
 import 'package:screens_practice/blog_screen.dart';
-import 'package:screens_practice/blog_screen2.dart';
 import 'package:screens_practice/chat_screen.dart';
-import 'package:screens_practice/setting_screen_another.dart';
 
 class PersonalChatScreen extends StatelessWidget {
   const PersonalChatScreen({super.key});

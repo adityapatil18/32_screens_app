@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:progress_indicator/progress_indicator.dart';
-import 'package:screens_practice/list_your_property2.dart';
+
 import 'package:screens_practice/post_your_property_screen.dart';
 
 class Filterscreen extends StatelessWidget {
