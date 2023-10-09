@@ -1,10 +1,8 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:screens_practice/explore_screen2.dart';
-import 'package:screens_practice/setting_screen_another.dart';
 import 'package:screens_practice/settings_screen2.dart';
 
 class ShareScreen extends StatefulWidget {
@@ -97,12 +95,12 @@ class _ShareScreenState extends State<ShareScreen> {
               children: [
                 GestureDetector(
                   onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ExploreScreen2(),
-                            ));
-                      },
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ExploreScreen2(),
+                        ));
+                  },
                   child: Container(
                     height: 280,
                     width: 250,
@@ -129,7 +127,9 @@ class _ShareScreenState extends State<ShareScreen> {
                             Text(
                               '14 Hope Street, Unit 3D',
                               style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                                  color: Colors.grey,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
                               height: 5,
@@ -137,13 +137,16 @@ class _ShareScreenState extends State<ShareScreen> {
                             Text(
                               'Something text ',
                               style: TextStyle(
-                                  fontWeight: FontWeight.w300, fontSize: 12),
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 12),
                             ),
                             SizedBox(
                               height: 20,
                             ),
                             Text(
                               'text . text . 3000 sq ft.',
+                              style: TextStyle(color: Colors.grey),
                             ),
                             SizedBox(
                               height: 5,
@@ -151,7 +154,9 @@ class _ShareScreenState extends State<ShareScreen> {
                             Text(
                               '\$30,500',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 18),
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
                             )
                           ],
                         )

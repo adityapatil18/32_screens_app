@@ -124,7 +124,6 @@ class _ExploreScreen2State extends State<ExploreScreen2> {
               title: Text(
                 'Top Localities',
               ),
-              tileColor: Colors.grey.shade300,
             ),
             Expanded(
               child: ListView.builder(

@@ -90,6 +90,7 @@ class ContactAgentScreen extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -106,6 +107,7 @@ class ContactAgentScreen extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -115,6 +117,7 @@ class ContactAgentScreen extends StatelessWidget {
               decoration: InputDecoration(
                   hintText: 'Email Address',
                   border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   focusedBorder: OutlineInputBorder(
@@ -122,6 +125,7 @@ class ContactAgentScreen extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -140,7 +144,7 @@ class ContactAgentScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 180,
+              height: 150,
             ),
             Divider(
               thickness: 2,

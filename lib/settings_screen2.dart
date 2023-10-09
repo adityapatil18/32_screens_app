@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:screens_practice/blog_screen2.dart';
-import 'package:screens_practice/chat_screen.dart';
 import 'package:screens_practice/explore_screen2.dart';
 import 'package:screens_practice/feed_screen.dart';
-import 'package:screens_practice/notifications_screen2.dart';
 import 'package:screens_practice/setting_screen_another.dart';
 
 class SettingsScreen2 extends StatefulWidget {
@@ -49,7 +47,7 @@ class _SettingsScreen2State extends State<SettingsScreen2> {
             icon: Icon(
               Icons.home,
               size: 30,
-              color: Colors.black,
+              color: Colors.grey,
             ),
             label: 'Home',
           ),
@@ -57,21 +55,21 @@ class _SettingsScreen2State extends State<SettingsScreen2> {
               icon: Icon(
                 Icons.search,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Explore'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.favorite_border_outlined,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Saved'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Settings',
               backgroundColor: Colors.black)

@@ -82,7 +82,9 @@ class LoginScreen2 extends StatelessWidget {
                         Text(
                           'Google',
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                              color: Colors.grey,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -126,7 +128,7 @@ class LoginScreen2 extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Divider(
-                          color: Colors.white,
+                          color: Colors.grey,
                           height: 1.0,
                           thickness: 1,
                           indent: 20,
@@ -142,7 +144,7 @@ class LoginScreen2 extends StatelessWidget {
                       ),
                       Expanded(
                         child: Divider(
-                          color: Colors.white,
+                          color: Colors.grey,
                           height: 1.0,
                           thickness: 1,
                           endIndent: 20,

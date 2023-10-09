@@ -76,6 +76,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/notification.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Notifications',
@@ -92,6 +93,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/giftbox.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Invite Friends',
@@ -108,6 +110,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/coupons.png',
                   height: 35,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Credits & Coupons',
@@ -120,6 +123,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/coupons.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'List Your Property',
@@ -136,6 +140,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/settings.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Settings',
@@ -152,6 +157,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/customerservice.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Help & Support',
@@ -164,6 +170,7 @@ class SettingsScreen extends StatelessWidget {
                 trailing: Image.asset(
                   'images/feedback.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Give us Feedback',
@@ -179,13 +186,14 @@ class SettingsScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        unselectedLabelStyle: TextStyle(color: Colors.grey),
         // fixedColor: Colors.black,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
               size: 30,
-              color: Colors.black,
+              color: Colors.grey,
             ),
             label: 'Home',
           ),
@@ -193,24 +201,24 @@ class SettingsScreen extends StatelessWidget {
               icon: Icon(
                 Icons.search,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Explore'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.favorite_border_outlined,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Saved'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Settings',
-              backgroundColor: Colors.black)
+              backgroundColor: Colors.grey)
         ],
       ),
     );

@@ -60,7 +60,7 @@ class Filterscreen extends StatelessWidget {
                   return Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey.shade300),
+                        color: Colors.grey),
                     child: Center(child: Text('Type')),
                   );
                 },

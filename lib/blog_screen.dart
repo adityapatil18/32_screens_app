@@ -20,7 +20,7 @@ class BlogScreen extends StatelessWidget {
           },
           child: Icon(
             Icons.arrow_back,
-            color: Colors.black,
+            color: Colors.grey,
           ),
         ),
         title: Text(

@@ -37,6 +37,7 @@ class SignupUsingMobile extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -53,6 +54,7 @@ class SignupUsingMobile extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -89,7 +91,7 @@ class SignupUsingMobile extends StatelessWidget {
                 Expanded(
                   child: Divider(
                     // color: Colors.black,
-                    height: 1.0,
+                    height: 1.0, color: Colors.grey,
                     thickness: 1,
                     indent: 40,
                   ),
@@ -104,6 +106,7 @@ class SignupUsingMobile extends StatelessWidget {
                 Expanded(
                   child: Divider(
                     // color: Colors.black,
+                    color: Colors.grey,
                     height: 1.0,
                     thickness: 1,
                     endIndent: 40,
@@ -134,7 +137,9 @@ class SignupUsingMobile extends StatelessWidget {
                       Text(
                         'Google',
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                            color: Colors.grey,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

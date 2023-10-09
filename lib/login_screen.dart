@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:screens_practice/login_screen2.dart';
+import 'package:screens_practice/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -77,7 +79,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           Text(
                             'Google',
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                color: Colors.grey,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -116,9 +120,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Expanded(
                       child: Divider(
-                        color: Colors.black,
+                        color: Colors.grey,
                         height: 1.0,
-                        thickness: 2,
+                        thickness: 1,
                         indent: 40,
                       ),
                     ),
@@ -131,9 +135,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Expanded(
                       child: Divider(
-                        color: Colors.black,
+                        color: Colors.grey,
                         height: 1.0,
-                        thickness: 2,
+                        thickness: 1,
                         endIndent: 40,
                       ),
                     ),

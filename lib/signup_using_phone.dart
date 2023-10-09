@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:screens_practice/setting_screen_another.dart';
-import 'package:screens_practice/settings_screen.dart';
-import 'package:screens_practice/settings_screen2.dart';
 
 class SignupUsingPhone extends StatelessWidget {
   const SignupUsingPhone({super.key});
@@ -39,6 +37,7 @@ class SignupUsingPhone extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -55,6 +54,7 @@ class SignupUsingPhone extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.green),
                   ),
                   enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(30))),
             ),
             SizedBox(
@@ -91,6 +91,7 @@ class SignupUsingPhone extends StatelessWidget {
                 Expanded(
                   child: Divider(
                     // color: Colors.black,
+                    color: Colors.grey,
                     height: 1.0,
                     thickness: 1,
                     indent: 40,
@@ -106,6 +107,7 @@ class SignupUsingPhone extends StatelessWidget {
                 Expanded(
                   child: Divider(
                     // color: Colors.black,
+                    color: Colors.grey,
                     height: 1.0,
                     thickness: 1,
                     endIndent: 40,
@@ -136,7 +138,9 @@ class SignupUsingPhone extends StatelessWidget {
                       Text(
                         'Google',
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                            color: Colors.grey,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

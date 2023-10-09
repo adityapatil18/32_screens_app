@@ -69,6 +69,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
                 trailing: Image.asset(
                   'images/notification.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Notifications',
@@ -86,6 +87,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
               child: ListTile(
                 trailing: Image.asset(
                   'images/giftbox.png',
+                  color: Colors.grey,
                   height: 30,
                 ),
                 title: Text(
@@ -102,6 +104,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
               child: ListTile(
                 trailing: Image.asset(
                   'images/coupons.png',
+                  color: Colors.grey,
                   height: 35,
                 ),
                 title: Text(
@@ -115,6 +118,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
                 trailing: Image.asset(
                   'images/coupons.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'List Your Property',
@@ -131,6 +135,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
                 trailing: Image.asset(
                   'images/settings.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Settings',
@@ -143,6 +148,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
                 trailing: Image.asset(
                   'images/customerservice.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Help & Support',
@@ -155,6 +161,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
                 trailing: Image.asset(
                   'images/feedback.png',
                   height: 30,
+                  color: Colors.grey,
                 ),
                 title: Text(
                   'Give us Feedback',
@@ -179,7 +186,7 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
             icon: Icon(
               Icons.home,
               size: 30,
-              color: Colors.black,
+              color: Colors.grey,
             ),
             label: 'Home',
           ),
@@ -187,21 +194,21 @@ class _SettingscreenAnotherState extends State<SettingscreenAnother> {
               icon: Icon(
                 Icons.search,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Explore'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.favorite_border_outlined,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Saved'),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
                 size: 30,
-                color: Colors.black,
+                color: Colors.grey,
               ),
               label: 'Settings',
               backgroundColor: Colors.black)
