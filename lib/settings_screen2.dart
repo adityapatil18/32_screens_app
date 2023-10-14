@@ -34,9 +34,6 @@ class _SettingsScreen2State extends State<SettingsScreen2> {
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
-          currentIndex:
-          _currentIndex;
-
           setState(() {
             _currentIndex = index;
           });
