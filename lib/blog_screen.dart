@@ -21,6 +21,7 @@ class BlogScreen extends StatelessWidget {
           child: Icon(
             Icons.arrow_back,
             color: Colors.grey,
+            size: 14,
           ),
         ),
         title: Text(
